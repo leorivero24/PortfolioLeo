@@ -9,6 +9,11 @@ html{
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
+
+
+
+
+
 /* MENU */
 .contenedor-header{
     background:#011e2e;
