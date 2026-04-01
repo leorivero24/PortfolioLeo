@@ -16,6 +16,16 @@ function seleccionar(){
     menuVisible = false;
 }
 
+//Funcion para cambiar idioma
+function setLanguage(lang) {
+    if (lang === 'es') {
+        window.location.href = "index-es.html";
+    } else if (lang === 'en') {
+        window.location.href = "index.html";
+    }
+}
+
+
 
 //Funcion que aplica las animaciones de las habilidades
 function efectoHabilidades(){

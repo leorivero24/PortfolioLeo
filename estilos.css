@@ -196,9 +196,9 @@ html{
     flex-wrap: wrap;
 }
 .sobremi .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
-    background-color: #252A2E;
+    width: 120px;
+    height: 120px;
+    background-color: #117fda;
     border-radius: 10px;
     margin: 0 15px 15px 0;
     display: flex;
@@ -525,14 +525,27 @@ html{
     justify-content: space-around;
 }
 .portfolio .galeria .proyecto{
-    position: relative;
+    /* position: relative;
     max-width: 340px;
     height: fit-content;
     margin: 10px;
+    cursor: pointer; */
+       position: relative;
+    width: 340px;
+    height: 200px; /* 🔥 altura fija */
+    margin: 10px;
     cursor: pointer;
+    overflow: hidden; /* importante */
 }
 .portfolio .galeria .proyecto img{
-    width: 100%;
+    /* width: 100%;
+    height: 100%;
+    display: block; */
+
+     width: 100%;
+    height: 100%;
+    object-fit: cover;       /* 🔥 clave */
+    object-position: top;    /* mejor para webs */
     display: block;
 }
 .portfolio .galeria .proyecto .overlay{
@@ -691,6 +704,31 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+.idioma img {
+    width: 30px;
+    height: 20px; 
+    object-fit: cover; 
+    border-radius: 3px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.idioma img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(255,255,255,0.6);
+}
+
+
+
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
     nav{

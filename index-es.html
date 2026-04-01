@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,48 +9,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Leonardo Rivero | Software Developer</title>
+    <title>Leonardo Rivero | Desarrollador de Software</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 
 <body>
-    <!-- MENU ENCABEZADO -->
+
+    ```
+    <!-- MENU -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
                 <a href="#">Leo</a>
             </div>
+
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">HOME</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">ABOUT ME</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CV</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PROJECTS</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#sobremi">SOBRE MÍ</a></li>
+                    <li><a href="#skills">HABILIDADES</a></li>
+                    <li><a href="#curriculum">CV</a></li>
+                    <li><a href="#portfolio">PROYECTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
             </nav>
+
             <div class="idioma">
-                <img src="https://flagcdn.com/w40/es.png" alt="Español" onclick="setLanguage('es')">
-                <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/w40/es.png" onclick="window.location.href='index-es.html'">
+                <img src="https://flagcdn.com/w40/gb.png" onclick="window.location.href='index.html'">
             </div>
+
 
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-
         </header>
     </div>
 
-    <!-- SECCION INICIO -->
+    <!-- INICIO -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/IMG-20240318-WA00139.jpg" alt="">
-            </div>
-            <h1>LEONARDO E. RIVERO</h1>
-            <h2>Junior Software Developer | IT Support Technician</h2>
+            <img src="img/IMG-20240318-WA00139.jpg" alt="">
+            <h1>Leonardo E. Rivero</h1>
+            <h2>Desarrollador de Software Junior | Técnico IT</h2>
             <div class="redes">
                 <a href="https://www.facebook.com/profile.php?id=100008803875204&mibextid=ZbWKwL" target="_blank"><i
                         class="fa-brands fa-facebook-f"></i></a>
@@ -62,111 +66,85 @@
         </div>
     </section>
 
-    <!-- SECCION SOBRE MI -->
+    <!-- SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-            <h2>About me!</h2>
-            <!-- <p>
-                <span>Hello, I'm Leonardo.</span> I am a Systems Technician and a Software Development student at the
-                University of La Punta. I am looking for my first opportunity as a Software Developer, bringing both
-                programming knowledge and hands-on experience in IT support and technology.
-            </p> -->
+            <h2>Sobre mí</h2>
             <p>
-                <span>Hello, I'm Leonardo.</span> I am a Systems Technician and a Software Development student at the
-                University of La Punta. I am currently seeking my first opportunity as a Software Developer, where I can
-                apply my programming knowledge and hands-on experience in IT support to build efficient and scalable
-                solutions.
+                <span>Hola, soy Leonardo.</span> Soy técnico en sistemas y estudiante de Desarrollo de Software en la
+                Universidad de La Punta. Busco mi primera oportunidad como desarrollador de software, aportando tanto
+                conocimientos en programación como experiencia práctica en soporte IT y tecnología.
             </p>
-            <h1>Education</h1>
+            <h1>Educación</h1>
             <p>
-                I am currently studying Software Development, where I am building a solid foundation in programming,
-                problem-solving, and software development methodologies.
+                Actualmente estoy estudiando Desarrollo de Software, donde estoy construyendo una base sólida en
+                programación, resolución de problemas y metodologías de desarrollo de software.
             </p>
+
             <div class="fila">
-                <!-- datos personales -->
                 <div class="col">
-                    <h3>Personal Information</h3>
+                    <h3>Información Personal</h3>
                     <ul>
-                        <li>
-                            <strong>Birthday</strong>
-                            29-07-1981
-                        </li>
-                        <li>
-                            <strong>Telephone</strong>
-                            2664-642996
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            leo.exerivero@gmail.com
-                        </li>
-                        <li>
-                            <strong>Website</strong>
-                            <a href=" https://leorivero24.github.io/PortfolioLeo/" target=”_blank”> Portfolio Leo </a>
-                        </li>
-                        <li>
-                            <strong>City</strong>
-                            San Luis, Argentina
-                        </li>
-                        <li>
-                            <strong>Role</strong>
-                            <span>Software Developer</span>
-                        </li>
+                        <li><strong>Cumpleaños</strong> 29-07-1981</li>
+                        <li><strong>Teléfono</strong> 2664-642996</li>
+                        <li><strong>Correo</strong> leo.exerivero@gmail.com</li>
+                        <li><strong>Ciudad</strong> San Luis, Argentina</li>
+                        <li><strong>Rol</strong> Desarrollador de Software</li>
                     </ul>
                 </div>
 
                 <!-- intereses -->
                 <div class="col">
-                    <h3>Interests</h3>
+                    <h3>Intereses</h3>
                     <div class="contenedor-intereses">
                         <div class="interes">
                             <i class="fa-sharp fa-regular fa-futbol"></i>
-                            <span>FOOTBALL</span>
+                            <span>FÚTBOL</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-person-running"></i>
-                            <span>RUNNING</span>
+                            <span>CORRER</span>
                         </div>
                         <div class="interes">
                             <i class="fa-sharp fa-solid fa-dumbbell"></i>
-                            <span>GYM</span>
+                            <span>GIMNASIO</span>
                         </div>
                         <div class="interes">
                             <i class="fa-sharp fa-solid fa-computer"></i>
-                            <span>TECHNOLOGY</span>
+                            <span>TECNOLOGÍA</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-plane-departure"></i>
-                            <span>PLANES</span>
+                            <span>AVIONES</span>
                         </div>
                         <div class="interes">
                             <i class="fa-sharp fa-solid fa-laptop"></i>
-                            <span>PROGRAMMING</span>
+                            <span>PROGRAMAR</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-car"></i>
-                            <span>CARS</span>
+                            <span>AUTOS</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-book-open"></i>
-                            <span>LEARNING</span>
+                            <span>APRENDER</span>
                         </div>
 
                     </div>
                 </div>
+
             </div>
-
-
-        </div>
     </section>
+
 
     <!-- SECCION SKILLS -->
     <section class="skills" id="skills">
         <div class="contenido-seccion">
-            <h2>Skills</h2>
+            <h2>Habilidades</h2>
             <div class="fila">
-                <!-- Technical Skill -->
+                <!-- Habilidades Técnicas -->
                 <div class="col">
-                    <h3>Technical Skills</h3>
+                    <h3>Habilidades Técnicas</h3>
                     <div class="skill">
                         <span>JAVASCRIPT</span>
                         <div class="barra-skill">
@@ -176,7 +154,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>HTML & CSS</span>
+                        <span>HTML y CSS</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>50%</span>
@@ -208,11 +186,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Professional Skills -->
+                <!-- Habilidades Profesionales -->
                 <div class="col">
-                    <h3>Professional Skills</h3>
+                    <h3>Habilidades Profesionales</h3>
                     <div class="skill">
-                        <span>COMMUNICATION</span>
+                        <span>COMUNICACIÓN</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>80%</span>
@@ -220,7 +198,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>TEAMWORK</span>
+                        <span>TRABAJO EN EQUIPO</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>70%</span>
@@ -228,7 +206,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>CREATIVITY</span>
+                        <span>CREATIVIDAD</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>70%</span>
@@ -236,7 +214,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>DEDICATION</span>
+                        <span>DEDICACIÓN</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>85%</span>
@@ -244,7 +222,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>ADAPTABILITY</span>
+                        <span>ADAPTABILIDAD</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>75%</span>
@@ -256,20 +234,20 @@
         </div>
     </section>
 
-    <!-- SECCION CURRICULUM -->
+    <!-- CV -->
     <section id="curriculum" class="curriculum">
         <div class="contenido-seccion">
             <h2>CV</h2>
             <div class="fila">
                 <div class="col izquierda">
-                    <h3>EDUCATION</h3>
+                    <h3>EDUCACIÓN</h3>
                     <div class="item izq">
-                        <h4>Secondary School</h4>
-                        <span class="casa">Juan Pascual Pringles School.</span>
+                        <h4>Escuela Secundaria</h4>
+                        <span class="casa">Escuela Juan Pascual Pringles.</span>
                         <span class="fecha">1995 - 2000</span>
                         <p>
-                            <li>Accounting Administrative Bachelor.</li>
-                            <li>Full High School.</li>
+                            <li>Bachiller Administrativo Contable.</li>
+                            <li>Secundario Completo.</li>
                             <br>
                             <br>
                         </p>
@@ -278,35 +256,35 @@
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>English Language</h4>
-                        <span class="casa">Saint Louis Institute</span>
+                        <h4>Idioma Inglés</h4>
+                        <span class="casa">Instituto Saint Louis</span>
                         <span class="fecha">1995 - 2000</span>
                         <p>
-                            <li>For 5 years passing the exams corresponding to this Institute.</li>
-                            <li> I have a diploma issued by the Institute.</li>
-                            <li>Oral and written communication skills.</li>
+                            <li>Durante 5 años aprobando los exámenes correspondientes del Instituto.</li>
+                            <li>Tengo un diploma emitido por el Instituto.</li>
+                            <li>Habilidades de comunicación oral y escrita.</li>
                         </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>Systems Analysis Technician</h4>
-                        <span class="casa">Institute Santo Domingo(Cordoba)</span>
-                        <span class="fecha">25 of September of 2020</span>
+                        <h4>Técnico en Análisis de Sistemas</h4>
+                        <span class="casa">Instituto Santo Domingo (Córdoba)</span>
+                        <span class="fecha">25 de septiembre de 2020</span>
                         <p>
-                            <li>I graduated as a systems analysis technician.</li>
+                            <li>Me gradué como técnico en análisis de sistemas.</li>
                         </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
                     <div class="item izq">
-                        <h4>Software Development Student</h4>
-                        <span class="casa">Software development – ​​UNIVERSITY OF LA PUNTA (ULP)</span>
-                        <span class="fecha">Present</span>
+                        <h4>Estudiante de Desarrollo de Software</h4>
+                        <span class="casa">Desarrollo de Software – UNIVERSIDAD DE LA PUNTA (ULP)</span>
+                        <span class="fecha">Actualidad</span>
                         <p>
-                            <li>I am studying software development at the University.</li>
+                            <li>Actualmente estudio desarrollo de software en la universidad.</li>
                         </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
@@ -314,43 +292,41 @@
                     </div>
                 </div>
                 <div class="col derecha">
-                    <h3>WORK EXPERIENCE</h3>
+                    <h3>EXPERIENCIA LABORAL</h3>
                     <div class="item der">
-                        <h4>Administrative Assistant</h4>
+                        <h4>Asistente Administrativo</h4>
                         <span class="casa">CORPUS S.A</span>
                         <span class="fecha">2013 - 2015</span>
                         <p>
-                            <li>Price updates and discounts, payment to suppliers, computer maintenance.</li>
-                            <li>Upload invoices, checks, IVA and IIBB, stock management.</li>
+                            <li>Actualización de precios y descuentos, pagos a proveedores, mantenimiento informático.
+                            </li>
+                            <li>Carga de facturas, cheques, IVA e IIBB, gestión de stock.</li>
                         </p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
                     <div class="item der">
-                        <h4>IT Technician</h4>
-                        <span class="casa">LEO INFORMATICA</span>
-                        <span class="fecha">Present</span>
+                        <h4>Técnico en Hardware y Soporte IT</h4>
+                        <span class="casa">LEO INFORMÁTICA</span>
+                        <span class="fecha">Actualidad</span>
                         <p style="text-align: justify;">
                         <p>
-                            <li>Computer maintenance and repair.</li>
-                            <li>Assembly and repair of PCs and laptops.</li>
-                            <li>Installation of operating systems and software.</li>
-                            <li>Hardware upgrades (SSD, RAM, etc.).</li>
-                            <li>Configuration of WiFi networks and routers.</li>
-                            <li>UTP cable assembly and crimping.</li>
-                            <li>BIOS flashing and chip reprogramming.</li>
-                            <li>Soldering and desoldering components.</li>
-                            <li>Screen replacement for laptops and all-in-one devices.</li>
-
+                            <li>Mantenimiento y reparación de computadoras.</li>
+                            <li>Armado y reparación de PCs y laptops.</li>
+                            <li>Instalación de sistemas operativos y software.</li>
+                            <li>Actualización de hardware (SSD, RAM, etc.).</li>
+                            <li>Configuración de redes WiFi y routers.</li>
+                            <li>Armado y crimpeado de cables UTP.</li>
+                            <li>Flasheo de BIOS y reprogramación de chips.</li>
+                            <li>Soldadura y desoldadura de componentes.</li>
+                            <li>Reemplazo de pantallas de laptops y equipos all-in-one.</li>
                         </p>
 
                         <li style="text-align: justify;">
-                            Installation and configuration of Wifi and DIRECTV Antennas
+                            Instalación y configuración de antenas Wifi y DIRECTV
                             <i class="fa-sharp fa-solid fa-signal"></i>
                         </li>
-
-
 
                         </p>
                         <div class="conectord">
@@ -361,35 +337,36 @@
             </div>
         </div>
         <button>
-            <a href="archivos/C.V-LeonardoE.Rivero-2.pdf" download>Download CV <i class="fa-solid fa-download"></i></a>
+            <a href="archivos/C.V-LeonardoE.Rivero-2.pdf" download>Descargar CV <i class="fa-solid fa-download"></i></a>
             <span class="overlay"></span>
         </button>
     </section>
 
-    <!-- SECCION PROYECTOS -->
+
+    <!-- SECCIÓN PROYECTOS -->
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h2>My Projects</h2>
+            <h2>Mis Proyectos</h2>
             <div class="galeria">
                 <div class="proyecto">
                     <img src="img/p1.jpg" alt="">
                     <div class="overlay">
                         <h3><a href="https://leorivero24.github.io/Web1/" target="_blank">LeoPC Web</a></h3>
                         <ul>
-                            <li>✔ Responsive design</li>
-                            <li>✔ HTML5 & CSS3</li>
-                            <li>✔ JavaScript (DOM manipulation)</li>
-                            <li>✔ Flexbox & CSS Grid</li>
+                            <li>✔ Diseño responsive</li>
+                            <li>✔ HTML5 y CSS3</li>
+                            <li>✔ JavaScript (manipulación del DOM)</li>
+                            <li>✔ Flexbox y CSS Grid</li>
                         </ul>
                     </div>
                 </div>
                 <div class="proyecto">
                     <img src="img/p2.jpg" alt="">
                     <div class="overlay">
-                        <h3><a href="https://web2-leorivero24.vercel.app/" target="_blank">Museum Art</a></h3>
+                        <h3><a href="https://web2-leorivero24.vercel.app/" target="_blank">Arte de Museo</a></h3>
                         <ul>
-                            <li>✔ Consumes REST API</li>
-                            <li>✔ Dynamic content rendering</li>
+                            <li>✔ Consumo de API REST</li>
+                            <li>✔ Renderizado dinámico de contenido</li>
                             <li>✔ JavaScript (Fetch)</li>
                         </ul>
                     </div>
@@ -405,7 +382,7 @@
                     <img src="img/p4.jpg" alt="">
                     <div class="overlay">
                         <h3><a href="https://leorivero24.github.io/Alojamiento/" target="_blank">Hotel Web</a></h3>
-                        <p>Hosting</p>
+                        <p>Alojamiento</p>
                     </div>
                 </div>
                 <div class="proyecto">
@@ -426,23 +403,24 @@
         </div>
     </section>
 
-    <!-- SECCION CONTACTO -->
+    <!-- CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2>Contact Me</h2>
+            <h2>Contáctame</h2>
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Name:" id="nombre">
+                    <input type="text" placeholder="Nombre:" id="nombre">
                     <div class="error" id="nombreError"></div>
-                    <input type="text" placeholder="Telephone:" id="telefono">
+                    <input type="text" placeholder="Teléfono:" id="telefono">
                     <div class="error" id="telefonoError"></div>
-                    <input type="text" placeholder="M@il:" id="email">
+                    <input type="text" placeholder="Correo:" id="email">
                     <div class="error" id="emailError"></div>
                     <!-- <input type="text" placeholder="Tema"> -->
-                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Message:"></textarea>
+                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Mensaje:"></textarea>
                     <div class="error" id="mensajeError"></div>
-                    <button id="enviarBtn" onclick="enviarMensaje()">SEND MESSAGE<i class="fa-solid fa-paper-plane"></i>
+                    <button id="enviarBtn" onclick="enviarMensaje()">ENVIAR MENSAJE<i
+                            class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
                 </div>
@@ -451,8 +429,7 @@
         <div id="resultado" class="resultado"></div>
     </section>
 
-
-    <!-- footer -->
+    <!-- FOOTER -->
     <footer>
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
@@ -465,10 +442,10 @@
                 <a href="https://linkedin.com/in/leorivero24/" target="_blank"><i
                         class="fa-brands fa-linkedin-in"></i></a>
         </div>
-        <h3 style="color: rgb(209, 208, 208);"> Leo ER Design &copy; | Web Developer</h3>
+        <h3 style="color: rgb(209, 208, 208);"> Diseño Leo ER &copy; | Desarrollador Web</h3>
     </footer>
-
     <script src="script.js"></script>
+
 </body>
 
 </html>
