@@ -741,7 +741,7 @@ html {
     .proyecto {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: justify;
     }
 
     .proyecto img {
