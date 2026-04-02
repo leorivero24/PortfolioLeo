@@ -53,14 +53,36 @@ window.onscroll = function(){
 } 
 
 //validar formulario contacto
+
+const idioma = document.documentElement.lang;
+
+const mensajes = {
+    es: {
+        nombre: 'El nombre es obligatorio.',
+        telefono: 'El teléfono debe tener 10 dígitos.',
+        email: 'El email no es válido.',
+        mensaje: 'El mensaje es obligatorio.',
+        enviado: 'Datos enviados:'
+    },
+    en: {
+        nombre: 'The name is required.',
+        telefono: 'The phone must have 10 digits.',
+        email: 'The email is not valid.',
+        mensaje: 'The message is required.',
+        enviado: 'Submitted data:'
+    }
+};
+
 function enviarMensaje() {
-    // Resetear los mensajes de error
+
+    const idioma = document.documentElement.lang;
+    const msg = mensajes[idioma] || mensajes['es']; // fallback español
+
     document.getElementById('nombreError').textContent = '';
     document.getElementById('telefonoError').textContent = '';
     document.getElementById('emailError').textContent = '';
     document.getElementById('mensajeError').textContent = '';
 
-    // Obtener los valores de los campos
     const nombre = document.getElementById('nombre').value.trim();
     const telefono = document.getElementById('telefono').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -68,48 +90,102 @@ function enviarMensaje() {
 
     let hayErrores = false;
 
-    // Validar campo obligatorio: Nombre
     if (!nombre) {
-        document.getElementById('nombreError').textContent = 'The name is required.';
+        document.getElementById('nombreError').textContent = msg.nombre;
         hayErrores = true;
     }
 
-    // Validar longitud máxima: Teléfono (10 dígitos)
     if (telefono.length !== 10) {
-        document.getElementById('telefonoError').textContent = 'The phone must have 10 digits.';
+        document.getElementById('telefonoError').textContent = msg.telefono;
         hayErrores = true;
     }
 
-    // Validar expresión regular: Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        document.getElementById('emailError').textContent = 'The email is not valid.';
+        document.getElementById('emailError').textContent = msg.email;
         hayErrores = true;
     }
 
-    // Validar campo obligatorio: Mensaje
     if (!mensaje) {
-        document.getElementById('mensajeError').textContent = 'The message is required.';
+        document.getElementById('mensajeError').textContent = msg.mensaje;
         hayErrores = true;
     }
 
-    // Si no hay errores, mostrar los datos enviados
     if (!hayErrores) {
         const resultadoDiv = document.getElementById('resultado');
         resultadoDiv.innerHTML = `
-            <h3>Datos enviados:</h3>
+            <h3>${msg.enviado}</h3>
             <p><strong>Nombre:</strong> ${nombre}</p>
             <p><strong>Teléfono:</strong> ${telefono}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Mensaje:</strong> ${mensaje}</p>
         `;
 
-        // Limpiar los campos del formulario
         document.getElementById('nombre').value = '';
         document.getElementById('telefono').value = '';
         document.getElementById('email').value = '';
         document.getElementById('mensaje').value = '';
-        
-     
     }
 }
+
+
+// function enviarMensaje() {
+//     // Resetear los mensajes de error
+//     document.getElementById('nombreError').textContent = '';
+//     document.getElementById('telefonoError').textContent = '';
+//     document.getElementById('emailError').textContent = '';
+//     document.getElementById('mensajeError').textContent = '';
+
+//     // Obtener los valores de los campos
+//     const nombre = document.getElementById('nombre').value.trim();
+//     const telefono = document.getElementById('telefono').value.trim();
+//     const email = document.getElementById('email').value.trim();
+//     const mensaje = document.getElementById('mensaje').value.trim();
+
+//     let hayErrores = false;
+
+//     // Validar campo obligatorio: Nombre
+//     if (!nombre) {
+//         document.getElementById('nombreError').textContent = 'The name is required.';
+//         hayErrores = true;
+//     }
+
+//     // Validar longitud máxima: Teléfono (10 dígitos)
+//     if (telefono.length !== 10) {
+//         document.getElementById('telefonoError').textContent = 'The phone must have 10 digits.';
+//         hayErrores = true;
+//     }
+
+//     // Validar expresión regular: Email
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     if (!emailRegex.test(email)) {
+//         document.getElementById('emailError').textContent = 'The email is not valid.';
+//         hayErrores = true;
+//     }
+
+//     // Validar campo obligatorio: Mensaje
+//     if (!mensaje) {
+//         document.getElementById('mensajeError').textContent = 'The message is required.';
+//         hayErrores = true;
+//     }
+
+//     // Si no hay errores, mostrar los datos enviados
+//     if (!hayErrores) {
+//         const resultadoDiv = document.getElementById('resultado');
+//         resultadoDiv.innerHTML = `
+//             <h3>Datos enviados:</h3>
+//             <p><strong>Nombre:</strong> ${nombre}</p>
+//             <p><strong>Teléfono:</strong> ${telefono}</p>
+//             <p><strong>Email:</strong> ${email}</p>
+//             <p><strong>Mensaje:</strong> ${mensaje}</p>
+//         `;
+
+//         // Limpiar los campos del formulario
+//         document.getElementById('nombre').value = '';
+//         document.getElementById('telefono').value = '';
+//         document.getElementById('email').value = '';
+//         document.getElementById('mensaje').value = '';
+        
+     
+//     }
+// }
