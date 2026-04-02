@@ -636,8 +636,9 @@ html {
 
 /* SECCION PORTFOLIO */
 
+/* ================= Portfolio ================= */
 .portfolio {
-    padding: 60px 20px; /* padding más flexible en móvil */
+    padding: 60px 20px;
     background: #131618;
 }
 
@@ -649,17 +650,16 @@ html {
     color: #0011ff;
 }
 
-.lista-proyectos {
+.portfolio .lista-proyectos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
 
-/* Tarjetas grandes */
-.proyecto {
+.portfolio .proyecto {
     display: flex;
-    align-items: flex-start; /* que el texto quede arriba en mobile */
+    align-items: flex-start;
     gap: 30px;
     width: 100%;
     max-width: 1200px;
@@ -670,120 +670,111 @@ html {
     transition: all 0.3s ease;
 }
 
-.proyecto:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.proyecto img {
+.portfolio .proyecto img {
     width: 300px;
     height: 190px;
     object-fit: cover;
     border-radius: 12px;
-    flex-shrink: 0; /* que no se achique */
+    flex-shrink: 0;
 }
 
-.info {
+.portfolio .info {
     flex: 1;
-    min-width: 0; /* evita overflow del texto */
+    min-width: 0;
 }
 
-.info h3 {
+.portfolio .info h3 {
     font-size: 26px;
     margin-bottom: 10px;
 }
 
-.info h3 a {
+.portfolio .info h3 a {
     color: #00bcd4;
     text-decoration: none;
 }
 
-.descripcion {
+.portfolio .descripcion {
     margin: 12px 0;
     font-size: 17px;
     line-height: 1.6;
     color: #ccc;
 }
 
-.tecnologias {
+.portfolio .tecnologias {
     margin: 10px 0;
     display: flex;
     gap: 18px;
     font-size: 28px;
 }
 
-.tecnologias i {
+.portfolio .tecnologias i {
     transition: all 0.3s ease;
     cursor: default;
 }
 
-.fa-html5 { color: #e34c26; }
-.fa-css3-alt { color: #264de4; }
-.fa-js { color: #f0db4f; }
-.fa-plug { color: #9c27b0; }
-.fa-database { color: #0112fd; }
-.fa-layer-group { color: #00bcd4; }
-.fa-node { color: #3c873a; }
-.fa-grip { color: #d103fa; }
-.fa-gears { color:#ff004c }
+/* Colores de iconos */
+.portfolio .fa-html5 { color: #e34c26; }
+.portfolio .fa-css3-alt { color: #264de4; }
+.portfolio .fa-js { color: #f0db4f; }
+.portfolio .fa-node { color: #3c873a; }
+.portfolio .fa-gears { color: #ff004c; }
+.portfolio .fa-database { color: #0112fd; }
+.portfolio .fa-plug { color: #9c27b0; }
+.portfolio .fa-layer-group { color: #00bcd4; }
+.portfolio .fa-grip { color: #d103fa; }
 
-.tecnologias i:hover {
+.portfolio .tecnologias i:hover {
     transform: translateY(-5px) scale(1.25);
     filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5));
 }
 
-/* =====================
-   MEDIA QUERIES
-===================== */
-
-/* Tablets y móviles grandes */
+/* ================= Media Queries ================= */
 @media (max-width: 992px) {
-    .proyecto {
+    .portfolio .proyecto {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .proyecto img {
+    .portfolio .proyecto img {
         width: 80%;
         max-width: 350px;
         height: auto;
     }
 
-    .info {
+    .portfolio .info {
         width: 100%;
     }
 
-    .tecnologias {
+    .portfolio .tecnologias {
         justify-content: center;
     }
 }
 
-/* Móviles pequeños */
 @media (max-width: 576px) {
     .portfolio h2 {
         font-size: 40px;
     }
 
-    .proyecto {
+    .portfolio .proyecto {
         padding: 20px;
         gap: 20px;
     }
 
-    .proyecto img {
+    .portfolio .proyecto img {
         width: 100%;
         height: auto;
     }
 
-    .info h3 {
+    .portfolio .info h3 {
         font-size: 22px;
     }
 
-    .descripcion {
+    .portfolio .descripcion {
         font-size: 16px;
     }
 
-    .tecnologias {
+    .portfolio .tecnologias {
         font-size: 24px;
         gap: 14px;
     }
