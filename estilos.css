@@ -636,7 +636,7 @@ html {
 
 /* SECCION PORTFOLIO */
 
-/* ================= Portfolio ================= */
+
 .portfolio {
     padding: 60px 20px;
     background: #131618;
@@ -668,6 +668,13 @@ html {
     border-radius: 14px;
     text-align: justify;
     transition: all 0.3s ease;
+    
+}
+
+.portfolio .proyecto:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra más intensa */
+    cursor: pointer;              /* Cambia el cursor */
 }
 
 .portfolio .proyecto img {
@@ -677,6 +684,8 @@ html {
     border-radius: 12px;
     flex-shrink: 0;
 }
+
+
 
 .portfolio .info {
     flex: 1;
@@ -722,6 +731,8 @@ html {
 .portfolio .fa-plug { color: #9c27b0; }
 .portfolio .fa-layer-group { color: #00bcd4; }
 .portfolio .fa-grip { color: #d103fa; }
+.portfolio .fa-table-list {color:brown}
+.portfolio .fa-mobile-retro {color:chartreuse}
 
 .portfolio .tecnologias i:hover {
     transform: translateY(-5px) scale(1.25);
