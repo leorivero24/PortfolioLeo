@@ -1095,6 +1095,10 @@ footer .arriba {
 }
 
 @media screen and (max-width:700px) {
+
+    .sobremi p{
+        text-align: justify;
+    }
     .sobremi .fila {
         display: block;
     }
