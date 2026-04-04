@@ -76,7 +76,7 @@ const mensajes = {
 function enviarMensaje() {
 
     const idioma = document.documentElement.lang;
-    const msg = mensajes[idioma] || mensajes['es']; // fallback español
+    const msg = mensajes[idioma] || mensajes['es'];
 
     document.getElementById('nombreError').textContent = '';
     document.getElementById('telefonoError').textContent = '';
@@ -112,80 +112,41 @@ function enviarMensaje() {
     }
 
     if (!hayErrores) {
-        const resultadoDiv = document.getElementById('resultado');
-        resultadoDiv.innerHTML = `
-            <h3>${msg.enviado}</h3>
-            <p><strong>Nombre:</strong> ${nombre}</p>
-            <p><strong>Teléfono:</strong> ${telefono}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Mensaje:</strong> ${mensaje}</p>
-        `;
 
-        document.getElementById('nombre').value = '';
-        document.getElementById('telefono').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('mensaje').value = '';
+        const btn = document.getElementById("enviarBtn");
+        btn.disabled = true;
+        btn.innerText = "Sending...";
+
+        const templateParams = {
+            name: nombre,
+            phone: telefono,
+            email: email,
+            message: mensaje
+        };
+
+        emailjs.send("service_f1yu2k9", "template_zr0g188", templateParams)
+        .then(function() {
+
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = "<h3>✅ Mensaje enviado correctamente</h3>";
+
+            document.getElementById('nombre').value = '';
+            document.getElementById('telefono').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mensaje').value = '';
+
+            btn.disabled = false;
+            btn.innerText = "SEND MESSAGE";
+
+        }, function(error) {
+            console.log(error);
+
+            btn.disabled = false;
+            btn.innerText = "SEND MESSAGE";
+
+            alert("❌ Error al enviar");
+        });
     }
 }
 
 
-// function enviarMensaje() {
-//     // Resetear los mensajes de error
-//     document.getElementById('nombreError').textContent = '';
-//     document.getElementById('telefonoError').textContent = '';
-//     document.getElementById('emailError').textContent = '';
-//     document.getElementById('mensajeError').textContent = '';
-
-//     // Obtener los valores de los campos
-//     const nombre = document.getElementById('nombre').value.trim();
-//     const telefono = document.getElementById('telefono').value.trim();
-//     const email = document.getElementById('email').value.trim();
-//     const mensaje = document.getElementById('mensaje').value.trim();
-
-//     let hayErrores = false;
-
-//     // Validar campo obligatorio: Nombre
-//     if (!nombre) {
-//         document.getElementById('nombreError').textContent = 'The name is required.';
-//         hayErrores = true;
-//     }
-
-//     // Validar longitud máxima: Teléfono (10 dígitos)
-//     if (telefono.length !== 10) {
-//         document.getElementById('telefonoError').textContent = 'The phone must have 10 digits.';
-//         hayErrores = true;
-//     }
-
-//     // Validar expresión regular: Email
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     if (!emailRegex.test(email)) {
-//         document.getElementById('emailError').textContent = 'The email is not valid.';
-//         hayErrores = true;
-//     }
-
-//     // Validar campo obligatorio: Mensaje
-//     if (!mensaje) {
-//         document.getElementById('mensajeError').textContent = 'The message is required.';
-//         hayErrores = true;
-//     }
-
-//     // Si no hay errores, mostrar los datos enviados
-//     if (!hayErrores) {
-//         const resultadoDiv = document.getElementById('resultado');
-//         resultadoDiv.innerHTML = `
-//             <h3>Datos enviados:</h3>
-//             <p><strong>Nombre:</strong> ${nombre}</p>
-//             <p><strong>Teléfono:</strong> ${telefono}</p>
-//             <p><strong>Email:</strong> ${email}</p>
-//             <p><strong>Mensaje:</strong> ${mensaje}</p>
-//         `;
-
-//         // Limpiar los campos del formulario
-//         document.getElementById('nombre').value = '';
-//         document.getElementById('telefono').value = '';
-//         document.getElementById('email').value = '';
-//         document.getElementById('mensaje').value = '';
-        
-     
-//     }
-// }
