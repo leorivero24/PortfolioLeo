@@ -478,25 +478,37 @@
 
 
 
-    
+
+
+
     <!-- CONTACTO -->
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("tmLMK22kGqfwdRN-T");
+        })();
+    </script>
+
+
+
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2>Contáctame</h2>
+            <h2>Contact Me</h2>
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Nombre:" id="nombre">
+                    <input type="text" placeholder="Name:" id="nombre">
                     <div class="error" id="nombreError"></div>
-                    <input type="text" placeholder="Teléfono:" id="telefono">
+                    <input type="text" placeholder="Telephone:" id="telefono">
                     <div class="error" id="telefonoError"></div>
-                    <input type="text" placeholder="Correo:" id="email">
+                    <input type="text" placeholder="M@il:" id="email">
                     <div class="error" id="emailError"></div>
                     <!-- <input type="text" placeholder="Tema"> -->
-                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Mensaje:"></textarea>
+                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Message:"></textarea>
                     <div class="error" id="mensajeError"></div>
-                    <button id="enviarBtn" onclick="enviarMensaje()">ENVIAR MENSAJE<i
-                            class="fa-solid fa-paper-plane"></i>
+                    <button id="enviarBtn" onclick="enviarMensaje()">ENVIAR MENSJAE<i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
                 </div>
