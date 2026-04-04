@@ -26,12 +26,12 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="#sobremi">SOBRE MÍ</a></li>
-                    <li><a href="#skills">HABILIDADES</a></li>
-                    <li><a href="#curriculum">CV</a></li>
-                    <li><a href="#portfolio">PROYECTOS</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MÍ</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CV</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PROYECTOS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
 
@@ -371,7 +371,7 @@
 
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h2>My Projects</h2>
+            <h2>Mis Proyectos</h2>
 
             <div class="lista-proyectos">
 
@@ -495,20 +495,21 @@
 
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2>Contact Me</h2>
+            <h2>Contactame</h2>
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Name:" id="nombre">
+                    <input type="text" placeholder="Nombre:" id="nombre">
                     <div class="error" id="nombreError"></div>
-                    <input type="text" placeholder="Telephone:" id="telefono">
+                    <input type="text" placeholder="Teléfono:" id="telefono">
                     <div class="error" id="telefonoError"></div>
-                    <input type="text" placeholder="M@il:" id="email">
+                    <input type="text" placeholder="Correo electrónico:" id="email">
                     <div class="error" id="emailError"></div>
                     <!-- <input type="text" placeholder="Tema"> -->
-                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Message:"></textarea>
+                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Mensaje:"></textarea>
                     <div class="error" id="mensajeError"></div>
-                    <button id="enviarBtn" onclick="enviarMensaje()">ENVIAR MENSJAE<i class="fa-solid fa-paper-plane"></i>
+                    <button id="enviarBtn" onclick="enviarMensaje()">ENVIAR MENSJAE<i
+                            class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
                 </div>
