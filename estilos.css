@@ -668,13 +668,15 @@ html {
     border-radius: 14px;
     text-align: justify;
     transition: all 0.3s ease;
-    
+
 }
 
-.portfolio .proyecto:hover{
+.portfolio .proyecto:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra más intensa */
-    cursor: pointer;              /* Cambia el cursor */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Sombra más intensa */
+    cursor: pointer;
+    /* Cambia el cursor */
 }
 
 .portfolio .proyecto img {
@@ -722,21 +724,53 @@ html {
 }
 
 
-.portfolio .fa-html5 { color: #e34c26; }
-.portfolio .fa-css3-alt { color: #264de4; }
-.portfolio .fa-js { color: #f0db4f; }
-.portfolio .fa-node { color: #3c873a; }
-.portfolio .fa-gears { color: #ff004c; }
-.portfolio .fa-database { color: #0112fd; }
-.portfolio .fa-plug { color: #9c27b0; }
-.portfolio .fa-layer-group { color: #00bcd4; }
-.portfolio .fa-grip { color: #d103fa; }
-.portfolio .fa-table-list {color:brown}
-.portfolio .fa-mobile-retro {color:chartreuse}
+.portfolio .fa-html5 {
+    color: #e34c26;
+}
+
+.portfolio .fa-css3-alt {
+    color: #264de4;
+}
+
+.portfolio .fa-js {
+    color: #f0db4f;
+}
+
+.portfolio .fa-node {
+    color: #3c873a;
+}
+
+.portfolio .fa-gears {
+    color: #ff004c;
+}
+
+.portfolio .fa-database {
+    color: #0112fd;
+}
+
+.portfolio .fa-plug {
+    color: #9c27b0;
+}
+
+.portfolio .fa-layer-group {
+    color: #00bcd4;
+}
+
+.portfolio .fa-grip {
+    color: #d103fa;
+}
+
+.portfolio .fa-table-list {
+    color: brown
+}
+
+.portfolio .fa-mobile-retro {
+    color: chartreuse
+}
 
 .portfolio .tecnologias i:hover {
     transform: translateY(-5px) scale(1.25);
-    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
 }
 
 
@@ -744,7 +778,8 @@ html {
     .portfolio .proyecto {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: justify;
+
     }
 
     .portfolio .proyecto img {
@@ -770,6 +805,7 @@ html {
     .portfolio .proyecto {
         padding: 20px;
         gap: 20px;
+        text-align: justify;
     }
 
     .portfolio .proyecto img {
