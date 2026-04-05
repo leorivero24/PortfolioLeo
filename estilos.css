@@ -148,7 +148,7 @@ html {
 }
 
 .sobremi h2 {
-    font-size: 48px;
+    font-size: 60px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -265,7 +265,7 @@ html {
 }
 
 .skills h2 {
-    font-size: 48px;
+    font-size: 60px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -487,7 +487,7 @@ html {
 }
 
 .curriculum h2 {
-    font-size: 48px;
+    font-size: 60px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -918,11 +918,126 @@ html {
 }
 
 .contacto h2 {
-    font-size: 48px;
+    font-size: 60px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
     color: #0011ff;
+}
+
+/* .contacto-info {
+ 
+    padding: 20px 0;
+    color: #008cff;
+} */
+
+/* .contacto-info {
+    font-size: 18px;
+    font-family: 'Righteous';
+    text-align: center;
+    opacity: 0;
+    transform: translateY(70px);
+    animation: aparecerTexto 1s ease forwards;
+     color: #008cff;
+     
+    
+}
+
+@keyframes aparecerTexto {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* 
+.contacto-info {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00c6ff;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
+   color: #008cff;
+   font-size: 18px;
+    font-family: 'Righteous';
+    text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+} */
+
+
+
+.contacto-info {
+    color: #008cff;
+    font-size: 18px;
+    font-family: 'Righteous';
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00c6ff;
+
+    animation: typing 8s steps(40, end) infinite, blink 0.7s infinite;
+
+    margin: 0 auto;
+}
+
+.contenedor-contacto-info {
+    text-align: center;
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+
+    to {
+        width: 35ch;
+    }
+
+    0% {
+        width: 0ch;
+    }
+
+    70% {
+        width: 40ch;
+    }
+
+    100% {
+        width: 40ch;
+    }
+
+    /* ajustá según largo del texto */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.contacto-info i {
+    margin-left: 5px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .contacto .fila {
@@ -987,12 +1102,29 @@ html {
 
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-5px); }
-  40% { transform: translateX(5px); }
-  60% { transform: translateX(-5px); }
-  80% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .error {
@@ -1003,12 +1135,12 @@ html {
 
 
 .shake {
-  animation: shake 0.3s;
+    animation: shake 0.3s;
 }
 
 .fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 
@@ -1121,11 +1253,12 @@ footer .arriba {
 }
 
 @media screen and (max-width:700px) {
-   
 
-    .sobremi p{
+
+    .sobremi p {
         text-align: justify;
     }
+
     .sobremi .fila {
         display: block;
     }
