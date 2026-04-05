@@ -929,6 +929,7 @@ html {
 
 
 .contacto-info {
+    padding-top: 5px;
     color: #008cff;
     font-size: 18px;
     font-family: 'Righteous';
@@ -987,6 +988,74 @@ html {
         transform: translateY(-5px);
     }
 }
+
+/*--ESPAÑOL--*/
+
+.contacto-info-ES {
+    padding-top: 5px;
+    color: #008cff;
+    font-size: 18px;
+    font-family: 'Righteous';
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00c6ff;
+
+    animation: typing-ES 5s steps(40, end) infinite, blink 0.7s infinite;
+
+    margin: 0 auto;
+}
+
+.contenedor-contacto-info-ES {
+    text-align: center;
+}
+
+@keyframes typing-ES {
+
+
+    0% {
+        width: 0ch;
+    }
+
+    50% {
+        width: 41ch;
+    }
+
+    100% {
+        width: 41ch;
+    }
+
+    /* ajustá según largo del texto */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.contacto-info-ES i {
+    margin-left: 5px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+
 
 .contacto .fila {
     display: flex;
@@ -1262,11 +1331,20 @@ footer .arriba {
 
     .contacto-info {
         font-size: 13px;
-        
         line-height: 1.4;
     }
 
     .contacto-info i {
-        font-size: 16px;
+        font-size: 13px;
+    }
+
+    /*ESP*/
+    .contacto-info-ES {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .contacto-info-ES i {
+        font-size: 13px;
     }
 }
