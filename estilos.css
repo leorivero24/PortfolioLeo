@@ -983,7 +983,7 @@ html {
     white-space: nowrap;
     border-right: 2px solid #00c6ff;
 
-    animation: typing 8s steps(40, end) infinite, blink 0.7s infinite;
+    animation: typing 5s steps(40, end) infinite, blink 0.7s infinite;
 
     margin: 0 auto;
 }
@@ -993,24 +993,18 @@ html {
 }
 
 @keyframes typing {
-    from {
-        width: 0ch;
-    }
-
-    to {
-        width: 35ch;
-    }
+ 
 
     0% {
         width: 0ch;
     }
 
     70% {
-        width: 40ch;
+        width: 36ch;
     }
 
     100% {
-        width: 40ch;
+        width: 36ch;
     }
 
     /* ajustá según largo del texto */
