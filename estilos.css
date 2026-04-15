@@ -745,7 +745,7 @@ html {
     height: 190px;
     object-fit: cover;
     border-radius: 12px;
-    flex-shrink: 0;
+   
 }
 
 /*nuevo*/
@@ -753,8 +753,8 @@ html {
 .portfolio .proyecto-img {
     position: relative;
     width: 300px;
-     height: 190px; 
-    flex-shrink: 0;
+     /* height: 190px;  */
+    
     overflow: hidden;
     border-radius: 12px;
     display: flex;
@@ -768,15 +768,15 @@ html {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease, filter 0.4s ease;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
      
 }
 
 .demo {
 
-    width: 100%;              /* 🔥 hace que baje */
+    width: 100%;              
     display: flex;
-    justify-content: center;  /* centra el botón */
+    justify-content: center;  
     margin-top: 10px;
    
 }
@@ -854,6 +854,7 @@ html {
 .portfolio .info {
     flex: 1;
     min-width: 0;
+
 }
 
 .portfolio .info h3 {
