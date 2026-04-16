@@ -135,6 +135,8 @@ html {
     color: #001eff;
 }
 
+
+
 /*SOBRE MI*/
 .sobremi {
     background-color: #011e2e;
@@ -698,8 +700,6 @@ html {
 
 
 
-
-
 .portfolio {
     padding: 60px 20px;
     background: #131618;
@@ -777,6 +777,31 @@ html {
     /* margin-bottom: 10px; */
 
 }
+
+
+
+.proyecto-img{
+    width: 300px;
+}
+
+.img-info{
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+    color:  rgb(223, 113, 21);
+    font-family: 'Righteous';
+}
+
+
+.proyecto-media{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 
 .demo {
 
